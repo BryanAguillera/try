@@ -1,0 +1,285 @@
+:root {
+
+    --color-bg1: rgb(108, 0, 162);
+    --color-bg2: rgb(0, 17, 82);
+    --color1: 18, 113, 255;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 200, 50, 50;
+    --color5: 180, 180, 50;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
+.home-page {
+
+    .gradient {
+        filter: url(#goo) blur(40px);
+        width: 100%;
+        height: 100%;
+    }
+
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+
+    @keyframes moveInCircle {
+        0% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    @keyframes moveVertical {
+        0% {
+            transform: translateY(-50%);
+        }
+
+        50% {
+            transform: translateY(50%);
+        }
+
+        100% {
+            transform: translateY(-50%);
+        }
+
+    }
+
+    @keyframes moveHorizontal {
+        0% {
+            transform: translateX(-50%)translateY(-10%);
+        }
+
+        50% {
+            transform: translateX(50%)translateY(10%);
+        }
+
+        100% {
+            transform: translateX(-50%)translateY(-10%);
+        }
+
+    }
+
+
+    svg {
+        display: none;
+    }
+
+    .g1 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        opacity: 1;
+        transform-origin: center center;
+        animation: moveVertical 30s ease infinite;
+    }
+
+    .g2 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        opacity: 1;
+        transform-origin: calc(50% - 400px);
+        animation: moveInCircle 20s reverse infinite;
+    }
+
+    .g3 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2 + 200px);
+        left: calc(50% - var(--circle-size) / 2 - 500px);
+
+        opacity: 1;
+        transform-origin: calc(50% + 400px);
+        animation: moveInCircle 40s linear infinite;
+    }
+
+    .g4 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+
+        width: var(--circle-size);
+        height: var(--circle-size);
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        opacity: 0.7;
+        transform-origin: calc(50% - 200px);
+        animation: moveHorizontal 20s reverse infinite;
+    }
+
+    .g5 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+
+
+        width: calc(var(--circle-size));
+        height: calc(var(--circle-size));
+        top: calc(50% - var(--circle-size) / 2);
+        left: calc(50% - var(--circle-size) / 2);
+
+        opacity: 1;
+        transform-origin: calc(50% - 800px) calc(50% + 200px);
+        animation: moveInCircle 20s ease infinite;
+
+    }
+
+    .interactive {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8)0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+        mix-blend-mode: var(--blending);
+        width: 100%;
+        height: 100%;
+        top: -50%;
+        left: -50%;
+
+        opacity: 0.7;
+
+    }
+
+    .text-zone {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+        border: 2px solid brown;
+    }
+
+    .image-zone {
+        border: 2px solid brown;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+
+        img {
+            width: 80%;
+            border-radius: 50%;
+            animation: rotateIn 1s linear both;
+        }
+    }
+
+
+    h1 {
+        color: maroon;
+        font-size: 53px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+    }
+
+    h2 {
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 11px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+        color: #358f2b;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #358f2b;
+        margin-top: 25px;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: #358f2b;
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 864px) {
+    .home-page {
+        // display: none;
+        position: relative;
+        display: flex;
+
+        .text-zone {
+            left: 0;
+            top: 70%;
+            width: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+
+            h1 {
+                text-align: center;
+                font-size: 40px;
+                font-style: italic;
+            }
+
+            h2 {
+                text-align: center;
+                margin-top: 0;
+            }
+
+            .flat-button {
+                float: none;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                width: fit-content;
+                white-space: nowrap;
+            }
+
+        }
+
+        .image-zone {
+            border: none;
+            margin: 0 auto;
+            right: 0;
+            top: 23%;
+            width: 100%;
+            text-align: center;
+
+            img {
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+}

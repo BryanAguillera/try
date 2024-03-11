@@ -1,0 +1,20 @@
+// .projects-container {
+//     // background: url('../../assets/images/background.jpg');
+
+//     background-color: #ffff;
+//     height: 100vh;
+//     overflow-y: scroll;
+// }
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #0F2519;
+    height: 100vh;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+
+}

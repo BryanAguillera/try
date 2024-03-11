@@ -1,0 +1,132 @@
+.contact-page {
+    font-family: "Inconsolata", monospace;
+    color: #ffffff;
+}
+
+.text-zone {
+    margin-top: 30px;
+    border: 2px solid;
+    padding: 0px 50px;
+
+    h1 {
+        color: #FFF67E;
+        font-size: 50px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+.contact-form {
+    border: 2px solid;
+    padding: 0px 50px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+        animation: fadeInUp 2s 2 s;
+        animation-fill-mode: forwards;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        // clear: both;
+        border: 0;
+
+
+
+    }
+
+    li.half {
+        width: 49%;
+        float: left;
+        margin-left: 2%;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+    }
+
+    input[type="email"],
+    input[type="text"] {
+        box-sizing: border-box;
+        width: 100%;
+        border: 0;
+        // border: 0;
+        font-family: "Inconsolata", monospace;
+        background: #154128;
+        height: 50px;
+        padding: 0 20px;
+        color: white;
+        font-family: "Inconsolata", monospace;
+        outline: none;
+
+    }
+
+
+    textarea {
+        width: 100%;
+        border: 0;
+        font-family: "Inconsolata", monospace;
+        background: #154128;
+        height: 50px;
+        font-size: 16px;
+        color: white;
+        padding: 20px;
+        min-height: 150px;
+        box-sizing: border-box;
+        outline: none;
+
+
+
+    }
+
+    .flat-button {
+        color: #FFF67E;
+        background: 0 0;
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 8px 10px;
+        border: 1px solid #FFF67E;
+        float: right;
+        border-radius: 4px;
+        font-family: "Inconsolata", monospace;
+        cursor: pointer;
+        transition: transform 0.1s;
+
+        &:hover {
+            background-color: #FFF67E;
+            color: #154128;
+            transform: scale(1.05);
+            border: 0;
+            border-radius: 0;
+        }
+
+        &:not(:hover) {
+            transition: transform 0.3s;
+            transform: scale(1);
+        }
+
+    }
+
+
+}
